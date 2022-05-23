@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32319.34
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ECOTE_PROJ", "ECOTE_PROJ\ECOTE_PROJ.csproj", "{8BD69E3C-81C6-4581-9248-2777099AA5FE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestProject1", "ECOTE_TESTS\ECOTE_TESTS.csproj", "{D8AC54B9-7ED4-45D8-A462-E0A88DBEC1CE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8BD69E3C-81C6-4581-9248-2777099AA5FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8BD69E3C-81C6-4581-9248-2777099AA5FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8BD69E3C-81C6-4581-9248-2777099AA5FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8BD69E3C-81C6-4581-9248-2777099AA5FE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D8AC54B9-7ED4-45D8-A462-E0A88DBEC1CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D8AC54B9-7ED4-45D8-A462-E0A88DBEC1CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D8AC54B9-7ED4-45D8-A462-E0A88DBEC1CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D8AC54B9-7ED4-45D8-A462-E0A88DBEC1CE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2A8A4017-717C-40D7-8EE1-45CE6E64359E}
+	EndGlobalSection
+EndGlobal
