@@ -23,7 +23,7 @@ namespace ECOTE_PROJ {
                 Console.Error.WriteLine($"Input file not found: {new FileInfo(inputFilePath).FullName}");
                 return;
             } catch (Exception ex) {
-                Console.Error.WriteLine($"Unexpected exception while finding dependencies: {ex.Message}{Environment.NewLine}{ex.StackTrace}");
+                Console.Error.WriteLine($"Unexpected exception while finding dependencies:{Environment.NewLine}{ex.Message}{Environment.NewLine}{ex.StackTrace}");
                 return;
             }
 
@@ -31,7 +31,7 @@ namespace ECOTE_PROJ {
                 SaveToFile(outputFilePath, dependencies);
                 Console.WriteLine($"Output saved to: {outputFilePath}");
             } catch (Exception ex) {
-                Console.Error.WriteLine($"Unexpected exception while saving output file: {ex.Message}{Environment.NewLine}{ex.StackTrace}");
+                Console.Error.WriteLine($"Unexpected exception while saving output file:{Environment.NewLine}{ex.Message}{Environment.NewLine}{ex.StackTrace}");
                 return;
             }
         }

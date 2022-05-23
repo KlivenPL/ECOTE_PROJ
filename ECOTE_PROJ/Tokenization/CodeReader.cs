@@ -19,7 +19,7 @@
         public bool TryPeek(out char c) {
             c = (char)0;
             if (Position < input.Length - 1) {
-                c = input[Position + 1];
+                c = input[Position];
                 return true;
             }
             return false;

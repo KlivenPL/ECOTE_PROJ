@@ -9,7 +9,7 @@ namespace ECOTE_PROJ.Tokenization {
                     continue;
                 }
 
-                if (reader.Current == '/' && reader.TryPeek(out var c) && c == '/') {
+                if (reader.Current == '#' || reader.Current == '/' && reader.TryPeek(out var c) && c == '/') {
                     reader.SkipToNextLine();
                     continue;
                 }

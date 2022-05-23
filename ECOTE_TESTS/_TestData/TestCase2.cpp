@@ -3,6 +3,8 @@
 class A {
     public:
         B *b;
+        #B *ignored1;
+        // B *ignored2;
 };
 
 class B {
@@ -10,5 +12,7 @@ class B {
         void test(){
             A aObj;
             aObj.b->test();
+            //aObj.ignored1->test();
+            #aObj.ignored2->test();
         }
 };
