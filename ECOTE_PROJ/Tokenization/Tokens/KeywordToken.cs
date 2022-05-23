@@ -11,15 +11,6 @@ namespace ECOTE_PROJ.Tokenization.Tokens {
 
         }
 
-        public KeywordToken(KeywordType value, int position, int line) {
-            Value = value;
-            AddDebugData(position, line);
-        }
-
-        public override IToken DeepCopy() {
-            return new KeywordToken(Value, CodePosition, LineNumber);
-        }
-
         public override bool TryAccept(CodeReader reader) {
             if (char.IsLetter(reader.Current)) {
                 var sb = new StringBuilder();

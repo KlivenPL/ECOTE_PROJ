@@ -7,15 +7,6 @@
 
         }
 
-        public SemicolonToken(char value, int position, int line) {
-            Value = value;
-            AddDebugData(position, line);
-        }
-
-        public override IToken DeepCopy() {
-            return new SemicolonToken(Value, CodePosition, LineNumber);
-        }
-
         public override bool TryAccept(CodeReader reader) {
             if (reader.Current == ';') {
                 Value = ';';

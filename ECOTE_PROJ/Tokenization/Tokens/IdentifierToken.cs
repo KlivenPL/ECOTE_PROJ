@@ -1,20 +1,14 @@
-﻿using System.Text;
+﻿using System.Linq;
+using System.Text;
 
 namespace ECOTE_PROJ.Tokenization.Tokens {
     class IdentifierToken : TokenBase<string> {
+        private static readonly string[] modifiers = new string[] { "signed", "unsigned", "long", "short" };
+
         public override string Value { get; protected set; }
         public override TokenClass Class => TokenClass.Identifier;
 
         public IdentifierToken() { }
-
-        public IdentifierToken(string value, int position, int line) {
-            Value = value;
-            AddDebugData(position, line);
-        }
-
-        public override IToken DeepCopy() {
-            return new IdentifierToken(Value, CodePosition, LineNumber);
-        }
 
         public override bool TryAccept(CodeReader reader) {
             if (char.IsLetter(reader.Current) || reader.Current == '_') {
@@ -25,6 +19,12 @@ namespace ECOTE_PROJ.Tokenization.Tokens {
                 }
 
                 Value = sb.ToString();
+
+                // ignore c++ modifiers.
+                if (modifiers.Any(x => x.Equals(Value, System.StringComparison.OrdinalIgnoreCase))) {
+                    return false;
+                }
+
                 reader.SetPosition(reader.Position - 1);
                 return true;
             }

@@ -14,5 +14,6 @@ class B {
 		void test(){
 			A aObj;
 			aObj.a = 2;
+			aObj.a = 3;
 		}
 };

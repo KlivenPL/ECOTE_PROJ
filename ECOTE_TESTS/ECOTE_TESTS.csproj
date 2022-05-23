@@ -7,25 +7,25 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="TestData\TestCase1.cpp" />
-    <None Remove="TestData\TestCase2.cpp" />
-    <None Remove="TestData\TestCase3.cpp" />
-    <None Remove="TestData\TestCase4.cpp" />
-    <None Remove="TestData\TestCase5.cpp" />
-    <None Remove="TestData\TestCase6.cpp" />
-    <None Remove="TestData\TestCase7.cpp" />
-    <None Remove="TestData\TestCase8.cpp" />
+    <None Remove="_TestData\TestCase1.cpp" />
+    <None Remove="_TestData\TestCase2.cpp" />
+    <None Remove="_TestData\TestCase3.cpp" />
+    <None Remove="_TestData\TestCase4.cpp" />
+    <None Remove="_TestData\TestCase5.cpp" />
+    <None Remove="_TestData\TestCase6.cpp" />
+    <None Remove="_TestData\TestCase7.cpp" />
+    <None Remove="_TestData\TestCase8.cpp" />
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Include="TestData\TestCase8.cpp" />
-    <EmbeddedResource Include="TestData\TestCase7.cpp" />
-    <EmbeddedResource Include="TestData\TestCase6.cpp" />
-    <EmbeddedResource Include="TestData\TestCase5.cpp" />
-    <EmbeddedResource Include="TestData\TestCase4.cpp" />
-    <EmbeddedResource Include="TestData\TestCase3.cpp" />
-    <EmbeddedResource Include="TestData\TestCase2.cpp" />
-    <EmbeddedResource Include="TestData\TestCase1.cpp" />
+    <EmbeddedResource Include="_TestData\TestCase8.cpp" />
+    <EmbeddedResource Include="_TestData\TestCase7.cpp" />
+    <EmbeddedResource Include="_TestData\TestCase6.cpp" />
+    <EmbeddedResource Include="_TestData\TestCase5.cpp" />
+    <EmbeddedResource Include="_TestData\TestCase4.cpp" />
+    <EmbeddedResource Include="_TestData\TestCase3.cpp" />
+    <EmbeddedResource Include="_TestData\TestCase2.cpp" />
+    <EmbeddedResource Include="_TestData\TestCase1.cpp" />
   </ItemGroup>
 
   <ItemGroup>

@@ -2,5 +2,6 @@
     public enum OperatorType {
         Arrow,
         Dot,
+        EqualSign,
     }
 }

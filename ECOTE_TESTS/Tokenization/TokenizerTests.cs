@@ -12,52 +12,53 @@ namespace ECOTE_TESTS.Tokenization {
             var reader = new CodeReader(input);
             var tokens = new Tokenizer().Tokenize(reader).ToList();
 
-            string xd = string.Join($",\r\n", tokens.Select(x => $"TokenClass.{x.Class}").ToList());
-
             var expectedTokenClasses = new TokenClass[] {
                 TokenClass.Keyword,
                 TokenClass.Identifier,
                 TokenClass.Bracket,
 
                 TokenClass.Keyword,
-
                 TokenClass.Identifier,
                 TokenClass.Identifier,
                 TokenClass.Semicolon,
-
                 TokenClass.Identifier,
                 TokenClass.Identifier,
                 TokenClass.Semicolon,
-
-                TokenClass.Identifier,
-                TokenClass.Identifier,
-                TokenClass.Identifier,
-                TokenClass.Bracket,
-
-                TokenClass.Identifier,
-                TokenClass.Identifier,
-                TokenClass.Semicolon,
-
-                TokenClass.Bracket,
-                TokenClass.Bracket,
-                TokenClass.Semicolon,
-
-                TokenClass.Keyword,
-                TokenClass.Identifier,
-                TokenClass.Bracket,
-
                 TokenClass.Keyword,
                 TokenClass.Identifier,
                 TokenClass.Identifier,
                 TokenClass.Bracket,
-
-                TokenClass.Identifier,
-                TokenClass.Identifier,
-                TokenClass.Semicolon,
 
                 TokenClass.Identifier,
                 TokenClass.Operator,
                 TokenClass.Identifier,
+                TokenClass.Semicolon,
+                TokenClass.Bracket,
+
+                TokenClass.Bracket,
+
+                TokenClass.Semicolon,
+                TokenClass.Keyword,
+                TokenClass.Identifier,
+                TokenClass.Bracket,
+
+                TokenClass.Keyword,
+                TokenClass.Identifier,
+                TokenClass.Identifier,
+                TokenClass.Bracket,
+
+                TokenClass.Identifier,
+                TokenClass.Identifier,
+                TokenClass.Semicolon,
+                TokenClass.Identifier,
+                TokenClass.Operator,
+                TokenClass.Identifier,
+                TokenClass.Operator,
+                TokenClass.Semicolon,
+                TokenClass.Identifier,
+                TokenClass.Operator,
+                TokenClass.Identifier,
+                TokenClass.Operator,
                 TokenClass.Semicolon,
 
                 TokenClass.Bracket,
@@ -73,8 +74,6 @@ namespace ECOTE_TESTS.Tokenization {
             var input = LoadTestCase(2);
             var reader = new CodeReader(input);
             var tokens = new Tokenizer().Tokenize(reader).ToList();
-
-            string xd = string.Join($",\r\n", tokens.Select(x => $"TokenClass.{x.Class}").ToList());
 
             var expectedTokenClasses = new TokenClass[] {
                 TokenClass.Keyword,
@@ -129,8 +128,6 @@ namespace ECOTE_TESTS.Tokenization {
             var reader = new CodeReader(input);
             var tokens = new Tokenizer().Tokenize(reader).ToList();
 
-            string xd = string.Join($",\r\n", tokens.Select(x => $"TokenClass.{x.Class}").ToList());
-
             var expectedTokenClasses = new TokenClass[] {
                 TokenClass.Keyword,
                 TokenClass.Identifier,
@@ -156,7 +153,8 @@ namespace ECOTE_TESTS.Tokenization {
                 TokenClass.Bracket,
                 TokenClass.Identifier,
                 TokenClass.Identifier,
-                TokenClass.Identifier,
+                TokenClass.Operator,
+                TokenClass.Keyword,
                 TokenClass.Identifier,
                 TokenClass.Semicolon,
 
@@ -181,8 +179,6 @@ namespace ECOTE_TESTS.Tokenization {
             var reader = new CodeReader(input);
             var tokens = new Tokenizer().Tokenize(reader).ToList();
 
-            string xd = string.Join($",\r\n", tokens.Select(x => $"TokenClass.{x.Class}").ToList());
-
             var expectedTokenClasses = new TokenClass[] {
                 TokenClass.Keyword,
                 TokenClass.Identifier,
@@ -252,6 +248,7 @@ namespace ECOTE_TESTS.Tokenization {
                 TokenClass.Identifier,
                 TokenClass.Operator,
                 TokenClass.Identifier,
+                TokenClass.Operator,
                 TokenClass.Identifier,
                 TokenClass.Semicolon,
 
@@ -269,35 +266,35 @@ namespace ECOTE_TESTS.Tokenization {
             var reader = new CodeReader(input);
             var tokens = new Tokenizer().Tokenize(reader).ToList();
 
-            string xd = string.Join($",\r\n", tokens.Select(x => $"TokenClass.{x.Class}").ToList());
-
             var expectedTokenClasses = new TokenClass[] {
                 TokenClass.Keyword,
                 TokenClass.Identifier,
                 TokenClass.Bracket,
-                TokenClass.Keyword,
-                TokenClass.Identifier,
-                TokenClass.Identifier,
-                TokenClass.Semicolon,
-
-                TokenClass.Identifier,
-                TokenClass.Identifier,
-                TokenClass.Semicolon,
-
-                TokenClass.Identifier,
-                TokenClass.Identifier,
-                TokenClass.Identifier,
-                TokenClass.Bracket,
-                TokenClass.Identifier,
-                TokenClass.Identifier,
-                TokenClass.Semicolon,
-
-                TokenClass.Bracket,
-                TokenClass.Bracket,
-                TokenClass.Semicolon,
 
                 TokenClass.Keyword,
                 TokenClass.Identifier,
+                TokenClass.Identifier,
+                TokenClass.Semicolon,
+                TokenClass.Identifier,
+                TokenClass.Identifier,
+                TokenClass.Semicolon,
+                TokenClass.Keyword,
+                TokenClass.Identifier,
+                TokenClass.Identifier,
+                TokenClass.Bracket,
+
+                TokenClass.Identifier,
+                TokenClass.Operator,
+                TokenClass.Identifier,
+                TokenClass.Semicolon,
+                TokenClass.Bracket,
+
+                TokenClass.Bracket,
+
+                TokenClass.Semicolon,
+                TokenClass.Keyword,
+                TokenClass.Identifier,
+
                 TokenClass.Bracket,
                 TokenClass.Bracket,
                 TokenClass.Semicolon
@@ -312,69 +309,58 @@ namespace ECOTE_TESTS.Tokenization {
             var reader = new CodeReader(input);
             var tokens = new Tokenizer().Tokenize(reader).ToList();
 
-            string xd = string.Join($",\r\n", tokens.Select(x => $"TokenClass.{x.Class}").ToList());
-
             var expectedTokenClasses = new TokenClass[] {
                 TokenClass.Keyword,
                 TokenClass.Identifier,
                 TokenClass.Bracket,
-                TokenClass.Keyword,
-                TokenClass.Identifier,
-                TokenClass.Identifier,
-                TokenClass.Identifier,
-                TokenClass.Semicolon,
-
-                TokenClass.Identifier,
-                TokenClass.Identifier,
-                TokenClass.Semicolon,
-
-                TokenClass.Identifier,
-                TokenClass.Identifier,
-                TokenClass.Semicolon,
-
-                TokenClass.Identifier,
-                TokenClass.Identifier,
-                TokenClass.Semicolon,
-
-                TokenClass.Identifier,
-                TokenClass.Identifier,
-                TokenClass.Identifier,
-                TokenClass.Semicolon,
-
-                TokenClass.Bracket,
-                TokenClass.Semicolon,
 
                 TokenClass.Keyword,
                 TokenClass.Identifier,
+                TokenClass.Identifier,
+                TokenClass.Semicolon,
+                TokenClass.Identifier,
+                TokenClass.Identifier,
+                TokenClass.Semicolon,
+                TokenClass.Identifier,
+                TokenClass.Identifier,
+                TokenClass.Semicolon,
+                TokenClass.Identifier,
+                TokenClass.Identifier,
+                TokenClass.Semicolon,
+                TokenClass.Identifier,
+                TokenClass.Identifier,
+                TokenClass.Semicolon,
                 TokenClass.Bracket,
+
+                TokenClass.Semicolon,
+                TokenClass.Keyword,
+                TokenClass.Identifier,
+                TokenClass.Bracket,
+
                 TokenClass.Keyword,
                 TokenClass.Identifier,
                 TokenClass.Identifier,
                 TokenClass.Bracket,
+
                 TokenClass.Identifier,
                 TokenClass.Identifier,
                 TokenClass.Semicolon,
-
                 TokenClass.Identifier,
                 TokenClass.Operator,
                 TokenClass.Identifier,
                 TokenClass.Semicolon,
-
                 TokenClass.Identifier,
                 TokenClass.Operator,
                 TokenClass.Identifier,
                 TokenClass.Semicolon,
-
                 TokenClass.Identifier,
                 TokenClass.Operator,
                 TokenClass.Identifier,
                 TokenClass.Semicolon,
-
                 TokenClass.Identifier,
                 TokenClass.Operator,
                 TokenClass.Identifier,
                 TokenClass.Semicolon,
-
                 TokenClass.Identifier,
                 TokenClass.Operator,
                 TokenClass.Identifier,
@@ -394,8 +380,6 @@ namespace ECOTE_TESTS.Tokenization {
             var reader = new CodeReader(input);
             var tokens = new Tokenizer().Tokenize(reader).ToList();
 
-            string xd = string.Join($",\r\n", tokens.Select(x => $"TokenClass.{x.Class}").ToList());
-
             var expectedTokenClasses = new TokenClass[] {
                 TokenClass.Keyword,
                 TokenClass.Identifier,
@@ -412,7 +396,7 @@ namespace ECOTE_TESTS.Tokenization {
                 TokenClass.Identifier,
                 TokenClass.Bracket,
 
-                TokenClass.Identifier,
+                TokenClass.Keyword,
                 TokenClass.Identifier,
                 TokenClass.Identifier,
                 TokenClass.Semicolon,
@@ -439,8 +423,6 @@ namespace ECOTE_TESTS.Tokenization {
             var reader = new CodeReader(input);
             var tokens = new Tokenizer().Tokenize(reader).ToList();
 
-            string xd = string.Join($",\r\n", tokens.Select(x => $"TokenClass.{x.Class}").ToList());
-
             var expectedTokenClasses = new TokenClass[] {
                 TokenClass.Keyword,
                 TokenClass.Identifier,
@@ -449,8 +431,19 @@ namespace ECOTE_TESTS.Tokenization {
                 TokenClass.Keyword,
                 TokenClass.Identifier,
                 TokenClass.Identifier,
+                TokenClass.Operator,
                 TokenClass.Semicolon,
                 TokenClass.Identifier,
+                TokenClass.Identifier,
+                TokenClass.Operator,
+                TokenClass.Identifier,
+                TokenClass.Semicolon,
+                TokenClass.Identifier,
+                TokenClass.Identifier,
+                TokenClass.Semicolon,
+                TokenClass.Identifier,
+                TokenClass.Identifier,
+                TokenClass.Operator,
                 TokenClass.Identifier,
                 TokenClass.Semicolon,
                 TokenClass.Bracket,
@@ -460,7 +453,7 @@ namespace ECOTE_TESTS.Tokenization {
                 TokenClass.Identifier,
                 TokenClass.Bracket,
 
-                TokenClass.Identifier,
+                TokenClass.Keyword,
                 TokenClass.Identifier,
                 TokenClass.Identifier,
                 TokenClass.Semicolon,
@@ -472,6 +465,14 @@ namespace ECOTE_TESTS.Tokenization {
                 TokenClass.Identifier,
                 TokenClass.Operator,
                 TokenClass.Identifier,
+                TokenClass.Identifier,
+                TokenClass.Operator,
+                TokenClass.Identifier,
+                TokenClass.Semicolon,
+                TokenClass.Identifier,
+                TokenClass.Operator,
+                TokenClass.Identifier,
+                TokenClass.Operator,
                 TokenClass.Identifier,
                 TokenClass.Operator,
                 TokenClass.Identifier,

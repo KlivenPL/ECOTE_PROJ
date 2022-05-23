@@ -6,17 +6,8 @@ namespace ECOTE_PROJ.Tokenization.Tokens {
 
         }
 
-        public BracketToken(BracketType value, int position, int line) {
-            Value = value;
-            AddDebugData(position, line);
-        }
-
         public override BracketType Value { get; protected set; }
         public override TokenClass Class => TokenClass.Bracket;
-
-        public override IToken DeepCopy() {
-            return new BracketToken(Value, CodePosition, LineNumber);
-        }
 
         public override bool TryAccept(CodeReader reader) {
             if (reader.Current == '{') {

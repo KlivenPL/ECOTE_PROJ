@@ -9,15 +9,6 @@ namespace ECOTE_PROJ.Tokenization.Tokens {
 
         }
 
-        public OperatorToken(OperatorType value, int position, int line) {
-            Value = value;
-            AddDebugData(position, line);
-        }
-
-        public override IToken DeepCopy() {
-            return new OperatorToken(Value, CodePosition, LineNumber);
-        }
-
         public override bool TryAccept(CodeReader reader) {
             if (reader.Current == '.') {
                 Value = OperatorType.Dot;
@@ -27,6 +18,9 @@ namespace ECOTE_PROJ.Tokenization.Tokens {
                     Value = OperatorType.Arrow;
                     return true;
                 }
+            } else if (reader.Current == '=') {
+                Value = OperatorType.EqualSign;
+                return true;
             }
 
             return false;
