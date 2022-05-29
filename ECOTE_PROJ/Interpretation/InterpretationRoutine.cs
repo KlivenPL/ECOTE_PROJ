@@ -21,23 +21,27 @@ namespace ECOTE_PROJ.Interpretation {
         }
 
         public string FindPublicDataMemberDependencies(TokenReader reader) {
-            // First we find all classes definitions and public data members
+            // First we find all classes definitions and public data members, then we find the dependencies.
 
-            var origReader = reader.Clone();
-            reader.Read();
+            FindAllClassesAndPublicDataMembers(reader.Clone());
+            FindPublicMemberDependencies(reader);
 
-            while (reader.HasNext) {
-                var origPos = reader.Position;
+            return dependencyBuilder.ToString();
+        }
+
+        private void FindAllClassesAndPublicDataMembers(TokenReader tokenReader) {
+            while (tokenReader.HasNext) {
+                var origPos = tokenReader.Position;
                 try {
-                    classDefinitionInterpreter.Parse(reader);
+                    classDefinitionInterpreter.Parse(tokenReader);
                 } catch (NothingFoundException) {
-                    reader.MoveTo(origPos);
-                    reader.Read();
+                    tokenReader.MoveTo(origPos);
+                    tokenReader.Read();
                 }
             }
+        }
 
-            reader = origReader;
-
+        private void FindPublicMemberDependencies(TokenReader reader) {
             while (reader.HasNext) {
                 bool hasException = false;
 
@@ -52,7 +56,6 @@ namespace ECOTE_PROJ.Interpretation {
 
                 try {
                     dependencyInterpreter.Parse(reader);
-                    // hasException = false;
                 } catch (NothingFoundException) {
                     hasException = true;
                 }
@@ -62,8 +65,6 @@ namespace ECOTE_PROJ.Interpretation {
                     reader.Read();
                 }
             }
-
-            return dependencyBuilder.ToString();
         }
     }
 }
